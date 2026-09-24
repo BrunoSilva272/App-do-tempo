@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Agora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Clima Agora</h1>
+
+    <form id="form-busca">
+      <input
+        type="text"
+        id="input-cidade"
+        placeholder="Digite uma cidade..."
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Mensagem de erro (escondida por padrão) -->
+    <p id="mensagem-erro" class="escondido">Cidade não encontrada. Tente novamente.</p>
+
+    <!-- Resultado do clima (escondido até ter uma busca) -->
+    <section id="resultado" class="escondido">
+      <p id="nome-cidade" class="cidade"></p>
+      <p id="temperatura" class="temperatura"></p>
+      <p id="descricao" class="descricao"></p>
+
+      <div class="detalhes">
+        <div>
+          <span class="label">Sensação</span>
+          <span id="sensacao"></span>
+        </div>
+        <div>
+          <span class="label">Umidade</span>
+          <span id="umidade"></span>
+        </div>
+        <div>
+          <span class="label">Vento</span>
+          <span id="vento"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

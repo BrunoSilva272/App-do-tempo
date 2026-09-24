@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+:root {
+  --azul-profundo: #14374F;
+  --azul-medio: #3E7CB1;
+  --azul-claro: #A6D4F2;
+  --areia: #FBF7EE;
+  --sol: #F2A65A;
+  --texto: #1D2B32;
+  --texto-suave: #5A6B72;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+  background: linear-gradient(160deg, var(--azul-profundo) 0%, var(--azul-medio) 55%, var(--azul-claro) 100%);
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--areia);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 30px 60px rgba(20, 55, 79, 0.35);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--azul-profundo);
+  margin-bottom: 24px;
+}
+
+#form-busca {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#input-cidade {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid transparent;
+  background: #EFEAE0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#input-cidade:focus {
+  border-color: var(--azul-medio);
+}
+
+#form-busca button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--azul-profundo);
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#form-busca button:hover {
+  background: var(--azul-medio);
+}
+
+.escondido {
+  display: none;
+}
+
+#mensagem-erro {
+  color: #C0392B;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+#resultado {
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid #E4DDD0;
+}
+
+.cidade {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--azul-profundo);
+  margin-top: 20px;
+}
+
+.temperatura {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--sol);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.descricao {
+  font-size: 1rem;
+  color: var(--texto-suave);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.detalhes {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.detalhes > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detalhes .label {
+  font-size: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.detalhes span:last-child {
+  font-weight: 700;
+  color: var(--texto);
+}
